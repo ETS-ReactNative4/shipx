@@ -8,6 +8,7 @@ import { Card } from 'semantic-ui-react'
 class RequestsList extends React.Component {
 
   componentDidMount() {
+    // this.requests = this.props.fetchAllRequests()
     this.props.fetchAllRequests()
   }
 
@@ -21,7 +22,7 @@ class RequestsList extends React.Component {
     // console.log('props', this.props.requests.requestsList)
     // console.log(this.props.fetchAllRequests)
 
-    const requests = this.props.fetchAllRequests()
+    // const requests = this.props.fetchAllRequests()
 
 
 

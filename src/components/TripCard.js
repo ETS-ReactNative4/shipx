@@ -12,7 +12,7 @@ class TripCard extends React.Component {
         close = () => this.setState({ open: false })
         
     render(){
-        console.log('trips',this.props)
+        // console.log('trips',this.props.trip)
         const { open, dimmer } = this.state
         const { depart_date, arrival_date, airline, departure_city, destination_city, flight_num } = this.props.trip
         return(

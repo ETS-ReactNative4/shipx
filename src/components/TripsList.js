@@ -21,7 +21,7 @@ class TripsList extends React.Component {
     // console.log('props', this.props.requests.requestsList)
     // console.log(this.props.fetchAllRequests)
 
-    const requests = this.props.fetchAllTrips()
+    // const requests = this.props.fetchAllTrips(id)
 
 
 

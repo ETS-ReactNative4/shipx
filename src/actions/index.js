@@ -8,15 +8,17 @@ import {
     GET_TRAVELERS,
     CREATE_TRAVELER,
     GET_USER,
-    GET_REAUTH
+    GET_REAUTH,
+    LOGOUT
+    
 } from './types'
 
 // FETCH REQUESTS
 
-export function fetchAllRequests() {
+export function fetchAllRequests(id) {
     return (dispatch) => {
         // dispatch({ type: GET_REQUESTS });
-        fetch('http://localhost:3000/api/v1/requests')
+        fetch(`http://localhost:3000/api/v1/expats/${id}/requests`)
         .then(resp => resp.json())
         .then(data => {
             dispatch({ type: GET_REQUESTS, payload: data})
@@ -26,9 +28,9 @@ export function fetchAllRequests() {
 
 // CREATE REQUEST
 
-export function createRequest(newRequest) {
+export function createRequest(newRequest, id) {
     return (dispatch) => {
-        fetch(`http://localhost:3000/api/v1/requests`, {
+        fetch(`http://localhost:3000/api/v1/expats/${id}/requests`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -47,12 +49,14 @@ export function createRequest(newRequest) {
 
 // FETCH TRIPS
 
-export function fetchAllTrips() {
+export function fetchAllTrips(id) {
+    console.log('get id', id)
     return (dispatch) => {
         // dispatch({ type: GET_TRIPS });
-        fetch('http://localhost:3000/api/v1/trips')
+        fetch(`http://localhost:3000/api/v1/travelers/${id}/trips`)
         .then(resp => resp.json())
         .then(data => {
+            console.log('data',data)
             dispatch({ type: GET_TRIPS, payload: data})
         });
     }
@@ -60,9 +64,9 @@ export function fetchAllTrips() {
 
 // CREATE TRIPS
 
-export function createTrip(newTrip) {
+export function createTrip(newTrip, id) {
     return (dispatch) => {
-        fetch(`http://localhost:3000/api/v1/trips`, {
+        fetch(`http://localhost:3000/api/v1/travelers/${id}/trips`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -156,7 +160,7 @@ export function getLogin(user) {
 // GET CURRENT USER
 
 export function getReauth() {
-    const token = localStorage.getItem('token')
+    const token = localStorage.getItem('jwt')
 
     if (token) {
         const options = {
@@ -170,9 +174,19 @@ export function getReauth() {
             fetch('http://localhost:3000/api/v1/reauth', options)
                 .then(resp => resp.json())
                 .then(user => {
-                    dispatch({ type: GET_REAUTH, payload: user})
-
+                    console.log(user)
+                    dispatch(getLogin(user))
                 })
         }
+    } else {
+        return (dispatch) => {}
+    }
+}
+
+// LOGOUT
+
+export function logout() {
+    return {
+        type: LOGOUT
     }
 }

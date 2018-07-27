@@ -16,8 +16,15 @@ import TravelerSignUp from './components/TravelerSignUp';
 import Login from './components/Login';
 import RequestsList from './components/RequestsList';
 import TripsList from './components/TripsList';
+import { getReauth } from './actions/index'
+import { connect } from 'react-redux';
 
 class App extends Component {
+
+  componentDidMount() {
+    this.props.getReauth()
+  }
+  
   render() {
     return (
       <div className="App">
@@ -59,4 +66,10 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    currentUser: state.authentication.currentUser
+  }
+}
+
+export default withRouter(connect(mapStateToProps, { getReauth })(App));

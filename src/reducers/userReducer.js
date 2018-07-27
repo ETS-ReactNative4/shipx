@@ -1,4 +1,4 @@
-import { GET_USER, GET_REAUTH } from '../actions/types'
+import { GET_USER, GET_REAUTH, LOGOUT } from '../actions/types'
 
 export const userReducer = (state = { currentUser: {} }, action) => {
     switch(action.type) {
@@ -13,6 +13,12 @@ export const userReducer = (state = { currentUser: {} }, action) => {
         return {
             ...state,
             currentUser: action.payload
+        };
+
+        case LOGOUT:
+        return {
+            ...state,
+            currentUser: {}
         }
 
         default:

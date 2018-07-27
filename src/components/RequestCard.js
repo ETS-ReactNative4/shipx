@@ -12,7 +12,7 @@ class RequestCard extends React.Component {
         close = () => this.setState({ open: false })
         
     render(){
-        console.log('requests',this.props)
+        // console.log('requests',this.props)
         const { open, dimmer } = this.state
         const { item_name, description, weight, departing_city, destination_city, item_cost } = this.props.request
         return(
