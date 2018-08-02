@@ -19,12 +19,11 @@ class RequestsList extends React.Component {
   
 
   render(){
-    // console.log('props', this.props.requests.requestsList)
+    console.log('props', this.props.requests.requestsList)
     // console.log(this.props.fetchAllRequests)
 
     // const requests = this.props.fetchAllRequests()
-
-
+    
 
     return(
       <div className="requestsList">

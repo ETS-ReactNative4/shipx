@@ -37,7 +37,7 @@
   width: 100%;
   padding: 20px;
   color: rgb(255, 255, 255);
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
 }
 
@@ -47,8 +47,15 @@
   width: 100%;
   padding: 20px;
   color: rgb(255, 255, 255);
-  position: absolute;
+  /* position: absolute; */
   bottom: 200px;
+}
+
+#welcome-to-shipx {
+  font-size: 5em;
+  background-color: #FB6C70;
+  color: rgb(255, 255, 255);
+  /* height: 140px; */
 }
 
 #anything {
@@ -57,7 +64,7 @@
   font-weight: lighter;
   font-size: 2.5em;
   text-align: left;
-  padding: 20px;
+  padding: 20px 20px 20px 30px;
 }
 
 #anything-div {
@@ -67,7 +74,7 @@
 #button-above-footer {
   float: right;
   margin-top: -92px;
-  padding-right: 300px;
+  padding-right: 140px;
 }
 
 .ui.color1.button:hover {
@@ -104,40 +111,54 @@
   font-weight: lighter;
 }
 
+
 .welcome {
   padding-top: 10px;
   font-size: 2em;
   font-family: "Gill Sans",
   sans-serif;
   font-weight: lighter;
+  padding-bottom: 15px;
 }
 
-.how-it-works {
-  padding-top: 50px;
-  font-size: 3em;
-}
-
-.laptop.icon {
+.laptop-icon {
   padding-top: 50px;
   float: left;
 }
 
-.add.sign.box.icon {
-  padding-top: 50px;
+.add-sign-box-icon {
+  padding: 50px 250px 0 0;
   float: none;
+
 }
 
-.suitcase.icon {
-  margin-top: -15px;
+.suitcase-icon {
+  margin-top: -120px;
   float: right;
   /* border: 3px solid blueviolet; */
+}
+
+.how-to {
+  font-size: .5em;
+}
+
+.how-it-works-text {
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+  padding-top: 80px;
+  font-size: 3em;
 }
 
 .how-it-works {
   display: table;
   margin-right: auto;
   margin-left: auto;
-  width: 60%;
+  width: 90%;
+  padding-top: 40px;
+  font-size: 4em;
+  margin-bottom: 80px !important;
 }
 
 /* .create-request {
@@ -204,20 +225,28 @@ label {
   margin: 20px;
 }
 
+.matching-requests {
+  margin: 40px 0 40px 0;
+}
+
 .signup-form {
   width: 50%;
   margin: 0 auto;
   padding: 15px;
-  border: 1px solid white;
-  background-color: #222233;
+  border: 1px solid rgb(15, 15, 15);
+  background-color: #ffffff;
 }
 
 .request-trip-form {
   width: 50%;
   margin: 0 auto;
   padding: 15px;
-  border: 1px solid white;
-  background-color: #abc3dd;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: white;
+}
+
+#add-trip-form {
+  padding-top: 30px;
 }
 
 #signup-form {
@@ -225,6 +254,79 @@ label {
 }
 
 .requestsList {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
+.expatRequestsList {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#traxpat-inc {
+  float: left;
+  bottom: 0;
+  /* position: absolute; */
+  margin: 120px 0 30px 40px;
+}
+
+#travelers {
+  float: left;
+  margin-left: -90px;
+}
+
+#travelers-text {
+  text-align: left;
+  float: left;
+  margin: 30px 0 0 -90px;
+  width: 25%;
+  color: #a0a0a0;
+}
+
+.company {
+  float: none;
+  margin-right: 400px;
+}
+
+#terms-policy {
+  margin-top: 10px;
+  color: #a0a0a0;
+}
+
+
+#terms-policy-2 {
+  color: #a0a0a0;
+}
+
+.contact {
+  float: right;
+  text-align: left;
+  margin: -63px 50px 0 0;
+}
+
+#contact-text {
+  margin-top: 10px;
+  color: #a0a0a0;
+}
+
+#contact-text-2 {
+  margin: 5px 0 5px 0;
+  color: #a0a0a0;
+}
+
+#contact-text-4 {
+  color: #a0a0a0;
+}
+
+#contact-text-3 {
+  margin: 0 0 10px 0;
+  color: #a0a0a0;
+}
+
+#price-tag {
+  margin: 10px 0 0 0;
+}
+
+#anythingWherever {
+  margin-top: 10px;
+  color: rgb(177, 177, 177);
+}

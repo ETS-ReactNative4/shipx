@@ -1,5 +1,6 @@
 import { Card, Button, Header, Modal, Icon, Image , Item, Label, CardMeta } from 'semantic-ui-react'
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
 
 // const paragraph = <ImageComponent src='/images/wireframe/short-paragraph.png' />
 
@@ -12,19 +13,18 @@ class RequestCard extends React.Component {
         close = () => this.setState({ open: false })
         
     render(){
-        // console.log('requests',this.props)
+        console.log('requests',this.props)
         const { open, dimmer } = this.state
-        const { item_name, description, weight, departing_city, destination_city, item_cost } = this.props.request
+        const { id, item_name, item_url, description, weight, departing_city, destination_city, item_cost, status } = this.props.request
         return(
         <div className="request-cards">
             {/* <Card.Group itemsPerRow={5}> */}
-                <Card>
+                <Card link>
                     <Card.Content>
                         {/* <Image floated='right' size='mini' src='/images/avatar/large/steve.jpg' /> */}
                         <div>
-                            <Card.Header style={{color: "red"}}><strong>{item_name}</strong></Card.Header>
-                            <br/>
-                            <Card.Meta><strong>{description}</strong></Card.Meta>
+                            <h3 style={{color: "red"}}><strong>Request #{this.props.requestNumber}</strong></h3><hr/>
+                            <Card.Header style={{color: "red"}}><strong><a href={item_url} target="_blank">{item_name}</a></strong></Card.Header>
                             <br/>
                             <Card.Meta><strong>Value: ${item_cost}</strong></Card.Meta>
                             <br/>
@@ -32,60 +32,47 @@ class RequestCard extends React.Component {
                             <br/>
                             {/* <h4>From: </h4> */}
                             <p>To: <strong style={{color: "teal"}}>{destination_city}</strong></p>
-                            {/* <h4>To: </h4> */}
+                            <br/>
+                            <Card.Meta><strong><small>{description}</small></strong></Card.Meta>
                             <br/>
                             <Card.Description>
                             <p>Weight: <strong>{weight} lb</strong></p>
-                            
-                            </Card.Description><br/>
-                            <Card.Meta>By Abdoul</Card.Meta>
+                            </Card.Description>
+
+                            {(this.props.currentUser.type === 'Expat') ?
+                            <div>
+                                <hr/>Estimated cost |  
+                            <Label id="price-tag" color='green'>
+                                ${(weight * 10)}
+                                {/* ${((weight * 10) + (item_cost * 0.05)).toFixed(2)} */}
+                            </Label><hr/></div> : null}
                         </div>
                     </Card.Content>
-                    <Card.Content extra>
+                    {/* <Card.Content extra>
                         <div className='ui two buttons'>
                         <Button basic color='green' onClick={this.show(true)}>
                             Details
                         </Button>
-                        {/* <Button basic color='red'>
+                        <Button basic color='red'>
                             Decline
-                        </Button> */}
+                        </Button>
                         </div>
-                    </Card.Content>
+                    </Card.Content> */}
                 </Card>
             {/* </Card.Group> */}
 
-            {/* MODAL CARD VIEW */}
+            {/* MODAL CARD VIEW GOES HERE */}
 
-            <div>
-                <Modal dimmer={dimmer} open={open} onClose={this.close}>
-                <Modal.Header>Item Name</Modal.Header>
-                <Modal.Content image>
-                    {/* <Image wrapped size='medium' src='/images/avatar/large/rachel.png' /> */}
-                    <Modal.Description>
-                    <Header>From: New York City - To: London</Header>
-                    <p>We've found the following gravatar image associated with your e-mail address.</p>
-                    <p>Is it okay to use this photo?</p>
-                    <h5>Weight: </h5>
-                    <h5>Status: </h5>
-                    </Modal.Description>
-                </Modal.Content>
-                <Modal.Actions>
-                    <Button color='black' onClick={this.close}>
-                    Nope
-                    </Button>
-                    <Button
-                    positive
-                    icon='checkmark'
-                    labelPosition='right'
-                    content="Add"
-                    onClick={this.close}
-                    />
-                </Modal.Actions>
-                </Modal>
-            </div>
+            
         </div>
         )
     }
 }
 
-export default RequestCard
+const mapStateToProps = (state) => {
+    return {
+        currentUser: state.authentication.currentUser
+    }
+}
+
+export default connect(mapStateToProps)(RequestCard)

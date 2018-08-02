@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Input, Menu } from 'semantic-ui-react'
+import { Input, Menu, MenuMenu } from 'semantic-ui-react'
 import { Button } from '../../node_modules/semantic-ui-react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -23,7 +23,7 @@ class Header extends Component {
 
     return (
       <Menu className="App-header">
-        <Menu.Menu position='left'>
+        {/* <Menu.Menu position='left'>
           <Link to="/">
             <Menu.Item
               className = "menuItem"
@@ -32,18 +32,44 @@ class Header extends Component {
               onClick={this.handleItemClick}
             />
           </Link>
+        </Menu.Menu> */}
+        <Menu.Menu id='center-logo' position='left'>
+          <Menu.Item>
+            <Link to='/'>
+              <img src='shipX.png' />
+            </Link>
+          </Menu.Item>
         </Menu.Menu>
         <Menu.Menu position='right'>
-          {/* <Menu.Item>
-            <Input icon='search' placeholder='Search...' />
-          </Menu.Item> */}
-          <div id="request-button-header">
-            <Link to="/create"><Button size="medium" name='Request' active={activeItem === 'Request'} className="ui color1 button">SUBMIT A REQUEST</Button></Link>
-          </div>
 
+          {
+            (!this.props.currentUser.id || this.props.currentUser.type === 'Traveler') ? null:
+            <div>
+              <div id="request-button-header">
+                <Link to="/create"><Button size="medium" name='Request' active={activeItem === 'Request'} className="ui color1 button">SUBMIT A REQUEST</Button></Link>
+              </div>
+              {/* <div id="request-button-header">
+                <Link to="/addtrip"><Button size="medium" name='Request' active={activeItem === 'Request'} className="ui color1 button">ADD TRIP</Button></Link>
+              </div> */}
+            </div>}
+          {
+
+            (!this.props.currentUser.id || this.props.currentUser.type === 'Expat') ? null:
+            <div>
+              {/* <div id="request-button-header">
+                <Link to="/create"><Button size="medium" name='Request' active={activeItem === 'Request'} className="ui color1 button">SUBMIT A REQUEST</Button></Link>
+              </div> */}
+              <div id="request-button-header">
+                <Link to="/addtrip"><Button size="medium" name='Request' active={activeItem === 'Request'} className="ui color1 button">ADD TRIP</Button></Link>
+              </div>
+            </div>}
+          
+          {
+            (this.props.currentUser.type === 'Traveler' || this.props.currentUser.type === 'Expat') ? null:
           <div id="traveler-button-header">
             <Link to="/traveler"><Button size="medium" name='Traveler' active={activeItem === 'Traveler'} className="ui color2 button">BECOME A TRAVELER</Button></Link>
-          </div>
+          </div>}
+          
           <Link to="#">
             <Menu.Item
               className = "menuItem"

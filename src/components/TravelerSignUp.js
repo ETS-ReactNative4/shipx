@@ -42,7 +42,7 @@ class TravelerSignUp extends React.Component {
 
     e.target.reset()
 
-    this.props.history.push('/travelers')
+    this.props.history.push('/login')
     }
 
 
@@ -60,58 +60,59 @@ render(){
 return(
     <div>
         <div>
-            <h1>SIGN UP TODAY</h1>
-            <h3>TO START EARNING EXTRA MONEY ON YOUR NEXT TRIP</h3>
+            <h3>TRAVELER SIGN UP</h3>
+            <h3>Start earning extra money on every trip, up to $500</h3>
         </div>
         <br/>
         <div id="signup-form">
             <Form size="medium" className="signup-form" onSubmit={this.handleSubmit}>
             
                 <Form.Field>
-                    <label style={{color: "white"}}>Full Name</label>
+                    <label style={{color: "black"}}>Full Name</label>
                     <input type="text" placeholder='John Doe' onChange={this.handleChange} name="name"/>
                 </Form.Field>
 
                 <Form.Field>
-                    <label style={{color: "white"}}>Email</label>
+                    <label style={{color: "black"}}>Email</label>
                     <input type="email" placeholder='john.doe@gmail.com' onChange={this.handleChange} name="email"/>
                 </Form.Field>
 
                 <Form.Field>
-                    <label style={{color: "white"}}>Password</label>
+                    <label style={{color: "black"}}>Password</label>
                     <input type="password" placeholder='******' onChange={this.handleChange} name="password"/>
                 </Form.Field>
 
                 <Form.Field>
-                    <label style={{color: "white"}}>Phone Number</label>
+                    <label style={{color: "black"}}>Phone Number</label>
                     <input type="tel" placeholder='+1 212-555-5555' onChange={this.handleChange} name="phone_number"/>
                 </Form.Field>
 
                 <Form.Field>
-                    <label style={{color: "white"}}>Passport #</label>
+                    <label style={{color: "black"}}>Passport #</label>
                     <input type="number" placeholder='31195855' onChange={this.handleChange} name="identification_num"/>
                 </Form.Field>
 
                 <Form.Field>
-                    <label style={{color: "white"}}>Street Address</label>
+                    <label style={{color: "black"}}>Street Address</label>
                     <input placeholder='1600 Virginia ave' onChange={this.handleChange} name="street"/>
                 </Form.Field>
 
                 <Form.Field>
-                    <label style={{color: "white"}}>City</label>
+                    <label style={{color: "black"}}>City</label>
                     <input type="text" placeholder='New York' onChange={this.handleChange} name="city"/>
                 </Form.Field>
 
                 <Form.Field>
-                    <label style={{color: "white"}}>Country</label>
+                    <label style={{color: "black"}}>Country</label>
                     <input placeholder='United States' onChange={this.handleChange} name="zip_code"/>
                 </Form.Field>
 
                 <Form.Field>
-                    <Checkbox style={{color: "white"}} label='I agree to the Terms and Conditions' />
+                    <Checkbox style={{color: "black"}} label='I agree to the Terms and Conditions' />
                 </Form.Field>
                 <Form.Field type="submit"><Button size="medium" className="ui color2 button" type="submit">Submit</Button></Form.Field>
             </Form>
+            <hr/>
         </div>
     </div>
     )

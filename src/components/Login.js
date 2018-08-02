@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Checkbox, Form } from 'semantic-ui-react';
-import {Redirect} from 'react-router-dom';
+import {Redirect, Link} from 'react-router-dom';
 import { getLogin } from '../actions/index';
 import { connect } from 'react-redux';
 
@@ -59,27 +59,39 @@ class Login extends React.Component {
     if (!this.props.currentUser.id) {
     return(
       <div id="signup-form">
-        <h1>Welcome to Peershyp</h1>
-      
-        <Form size="medium" className="signup-form" onSubmit={this.handleSubmit}>
+        
+        <div id="welcome-to-shipx">
+          <hr/>
+            <br/>
+              <div>Welcome to ShipX</div>
+            <br/>
+          <hr/>
+        </div>
+        {/* <hr/> */}
+        <h1>Log in</h1>
+        <br/>
+          <Form size="medium" className="signup-form" onSubmit={this.handleSubmit}>
 
-            <Form.Field>
-                <label style={{color: "white"}}>Email</label>
-                <input type="email" placeholder='john.doe@gmail.com' onChange={this.handleChange} name="email"/>
-            </Form.Field>
+              <Form.Field>
+                  <label style={{color: "black"}}>Email</label>
+                  <input type="email" placeholder='john.doe@gmail.com' onChange={this.handleChange} name="email"/>
+              </Form.Field>
 
-            <Form.Field>
-                <label style={{color: "white"}}>Password</label>
-                <input type="password" placeholder='******' onChange={this.handleChange} name="password"/>
-            </Form.Field>
+              <Form.Field>
+                  <label style={{color: "black"}}>Password</label>
+                  <input type="password" placeholder='******' onChange={this.handleChange} name="password"/>
+              </Form.Field>
 
-            <Form.Field required>
-                <label style={{color: "white"}}>Logging in as:</label>
-                <Form.Select fluid label='Category' options={options} placeholder='please select one' onChange={this.handleChange} name="category"/>
-            </Form.Field>
+              <Form.Field required>
+                  <label style={{color: "black"}}>Logging in as:</label>
+                  <Form.Select fluid label='Category' options={options} placeholder='please select one' onChange={this.handleChange} name="category"/>
+              </Form.Field>
 
-            <Form.Field type="submit"><Button size="medium" className="ui color3 button" type="submit">Login</Button></Form.Field>
-        </Form>
+              <Form.Field type="submit"><Button size="medium" className="ui color3 button" type="submit">Login</Button></Form.Field>
+          </Form>
+
+          <h3> Don't have an account yet?</h3>
+          <h4>Sign up as an <Link to="/signup">Expat</Link> or <Link to="/traveler">Traveler</Link></h4>
       </div>
     ); } else {
           return <Redirect to='/' />

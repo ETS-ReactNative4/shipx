@@ -9,11 +9,47 @@ import {
     CREATE_TRAVELER,
     GET_USER,
     GET_REAUTH,
-    LOGOUT
+    LOGOUT,
+    GET_ALL_REQUESTS,
+    GET_MATCHING_REQUESTS,
+    GET_SELECTED_TRIP
     
 } from './types'
 
-// FETCH REQUESTS
+// FETCH ALL EXPATS REQUESTS
+
+export function fetchAllExpatsRequests() {
+    return (dispatch) => {
+        // dispatch({ type: GET_REQUESTS });
+        fetch(`http://localhost:3000/api/v1/requests`)
+        .then(resp => resp.json())
+        .then(data => {
+            // console.log('data', data)
+            dispatch({ type: GET_ALL_REQUESTS, payload: data})
+        });
+    }
+}
+
+// GET MATCHING REQUESTS
+
+export function getMatchingRequests(data) {
+    return {
+        type: GET_MATCHING_REQUESTS,
+        payload: data
+    }
+}
+
+// GET SELECTED TRIP 
+
+export function getSelectedTrip(trip) {
+    return {
+        type: GET_SELECTED_TRIP,
+        payload: trip
+    }
+}
+
+
+// FETCH EXPAT REQUESTS
 
 export function fetchAllRequests(id) {
     return (dispatch) => {
@@ -21,12 +57,13 @@ export function fetchAllRequests(id) {
         fetch(`http://localhost:3000/api/v1/expats/${id}/requests`)
         .then(resp => resp.json())
         .then(data => {
+            console.log('data', data)
             dispatch({ type: GET_REQUESTS, payload: data})
         });
     }
 }
 
-// CREATE REQUEST
+// CREATE EXPAT REQUEST
 
 export function createRequest(newRequest, id) {
     return (dispatch) => {
@@ -47,7 +84,7 @@ export function createRequest(newRequest, id) {
     }
 }
 
-// FETCH TRIPS
+// FETCH TRAVELER TRIPS
 
 export function fetchAllTrips(id) {
     console.log('get id', id)
@@ -56,13 +93,13 @@ export function fetchAllTrips(id) {
         fetch(`http://localhost:3000/api/v1/travelers/${id}/trips`)
         .then(resp => resp.json())
         .then(data => {
-            console.log('data',data)
+            // console.log('data',data)
             dispatch({ type: GET_TRIPS, payload: data})
         });
     }
 }
 
-// CREATE TRIPS
+// CREATE TRAVELER TRIPS
 
 export function createTrip(newTrip, id) {
     return (dispatch) => {

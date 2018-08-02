@@ -9,22 +9,24 @@ class Homepage extends React.Component {
 
   render(){
     return(
-      <div>
+      <div className="home">
         {/* < Header className = "header" /> */}
-        <div>
+        <div id="body">
             <div className="welcome">
-                The fastest way to shop from your home country and get it delivered
+                The fastest way to request anything (legal) from anywhere (on earth) and get it delivered
             </div>
-
-            <div className="how-it-works">
-                HOW IT WORKS
-            </div>
-
+            <div><hr/></div>
             <div>
+              <div className="how-it-works-text">
+                  HOW IT WORKS
+              </div>
+              <div id='anythingWherever'>Anything. From Anywhere. To wherever.</div>
+            </div>
+
+            <div className="how-it-works-container">
                 <HowItWorks />
             </div>
             
-
         </div>
         <AboveFooter className="Above-footer"/>
         <Footer className="App-footer"/>

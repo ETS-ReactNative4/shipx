@@ -6,16 +6,19 @@ class Login extends React.Component {
   render(){
     return(
       <div className="how-it-works">
-        <div>
+        <div class="laptop-icon">
             <i class="laptop icon"></i>
+            <h3 className="how-to">Sign up in 37 seconds</h3>
         </div>
 
-        <div>
+        <div class="add-sign-box-icon">
             <i class="add sign box icon"></i>
+            <h3 className="how-to">Add a Request</h3>
         </div>
 
-        <div className="suiticon">
+        < div className = "suitcase-icon">
             <i class="suitcase icon"></i>
+            <h3 className="how-to">Receive Your Request</h3>
         </div>
       </div>
     )
