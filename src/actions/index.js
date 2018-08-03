@@ -21,7 +21,7 @@ import {
 export function fetchAllExpatsRequests() {
     return (dispatch) => {
         // dispatch({ type: GET_REQUESTS });
-        fetch(`http://shipxapi.herokuapp.com/api/v1/requests`)
+        fetch(`https://shipxapi.herokuapp.com/api/v1/requests`)
         .then(resp => resp.json())
         .then(data => {
             // console.log('data', data)
@@ -54,7 +54,7 @@ export function getSelectedTrip(trip) {
 export function fetchAllRequests(id) {
     return (dispatch) => {
         // dispatch({ type: GET_REQUESTS });
-        fetch(`http://shipxapi.herokuapp.com/api/v1/expats/${id}/requests`)
+        fetch(`https://shipxapi.herokuapp.com/api/v1/expats/${id}/requests`)
         .then(resp => resp.json())
         .then(data => {
             console.log('data', data)
@@ -67,7 +67,7 @@ export function fetchAllRequests(id) {
 
 export function createRequest(newRequest, id) {
     return (dispatch) => {
-        fetch(`http://shipxapi.herokuapp.com/api/v1/expats/${id}/requests`, {
+        fetch(`https://shipxapi.herokuapp.com/api/v1/expats/${id}/requests`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -90,7 +90,7 @@ export function fetchAllTrips(id) {
     console.log('get id', id)
     return (dispatch) => {
         // dispatch({ type: GET_TRIPS });
-        fetch(`http://shipxapi.herokuapp.com/api/v1/travelers/${id}/trips`)
+        fetch(`https://shipxapi.herokuapp.com/api/v1/travelers/${id}/trips`)
         .then(resp => resp.json())
         .then(data => {
             // console.log('data',data)
@@ -103,7 +103,7 @@ export function fetchAllTrips(id) {
 
 export function createTrip(newTrip, id) {
     return (dispatch) => {
-        fetch(`http://shipxapi.herokuapp.com/api/v1/travelers/${id}/trips`, {
+        fetch(`https://shipxapi.herokuapp.com/api/v1/travelers/${id}/trips`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -125,7 +125,7 @@ export function createTrip(newTrip, id) {
 export function fetchAllExpats() {
     return (dispatch) => {
         // dispatch({ type: GET_EXPATS });
-        fetch('http://shipxapi.herokuapp.com/api/v1/expats')
+        fetch('https://shipxapi.herokuapp.com/api/v1/expats')
         .then(resp => resp.json())
         .then(data => {
             dispatch({ type: GET_EXPATS, payload: data})
@@ -137,7 +137,7 @@ export function fetchAllExpats() {
 
 export function createExpat(newExpat) {
     return (dispatch) => {
-        fetch(`http://shipxapi.herokuapp.com/api/v1/expats`, {
+        fetch(`https://shipxapi.herokuapp.com/api/v1/expats`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -158,7 +158,7 @@ export function createExpat(newExpat) {
 export function fetchAllTravelers() {
     return (dispatch) => {
         // dispatch({ type: GET_TRAVELERS });
-        fetch('http://shipxapi.herokuapp.com/api/v1/travelers')
+        fetch('https://shipxapi.herokuapp.com/api/v1/travelers')
         .then(resp => resp.json())
         .then(data => {
             dispatch({ type: GET_TRAVELERS, payload: data})
@@ -170,7 +170,7 @@ export function fetchAllTravelers() {
 
 export function createTraveler(newTraveler) {
     return (dispatch) => {
-        fetch(`http://shipxapi.herokuapp.com/api/v1/travelers`, {
+        fetch(`https://shipxapi.herokuapp.com/api/v1/travelers`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -208,7 +208,7 @@ export function getReauth() {
             }
         }
         return (dispatch) => {
-            fetch('http://shipxapi.herokuapp.com/api/v1/reauth', options)
+            fetch('https://shipxapi.herokuapp.com/api/v1/reauth', options)
                 .then(resp => resp.json())
                 .then(user => {
                     console.log(user)

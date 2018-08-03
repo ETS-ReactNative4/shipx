@@ -43,7 +43,7 @@ class Login extends React.Component {
         body: JSON.stringify(this.state.fields)
       }
       // console.log(options)
-      fetch('http://shipxapi.herokuapp.com/api/v1/login', options)
+      fetch('https://shipxapi.herokuapp.com/api/v1/login', options)
       .then(resp => resp.json())
       .then(user => {
           localStorage.setItem('jwt', user.jwt)
