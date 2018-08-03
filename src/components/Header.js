@@ -36,7 +36,7 @@ class Header extends Component {
         <Menu.Menu id='center-logo' position='left'>
           <Menu.Item>
             <Link to='/'>
-              <img src='shipX.png' />
+              <img src='https://..shipX.png' />
             </Link>
           </Menu.Item>
         </Menu.Menu>
