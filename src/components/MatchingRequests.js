@@ -33,8 +33,8 @@ class MatchingRequests extends React.Component {
     // const requests = this.props.fetchAllTrips()
 
     const filteredRequests = this.props.requests.allRequestsList.filter(request => {
-      return (request.departing_city).toLowerCase().trim() === (this.props.selectedTrip.departure_city).toLowerCase().trim() &&
-      (request.destination_city).toLowerCase().trim() === (this.props.selectedTrip.destination_city).toLowerCase().trim()
+      return ((this.props.selectedTrip.departure_city).toLowerCase().trim()).includes((request.departing_city).toLowerCase().trim()) &&
+      ((this.props.selectedTrip.destination_city).toLowerCase().trim()).includes((request.destination_city).toLowerCase().trim())
     })
 
     console.log(filteredRequests);
