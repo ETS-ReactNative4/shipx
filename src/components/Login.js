@@ -91,7 +91,8 @@ class Login extends React.Component {
           </Form>
 
           <h3> Don't have an account yet?</h3>
-          <h4>Sign up as an <Link to="/signup">Expat</Link> or <Link to="/traveler">Traveler</Link></h4>
+          <h4>Sign up as an <Link to="/signup">Expat</Link> or <Link to="/traveler">Travelers</Link></h4>
+          <div><hr/></div>
       </div>
     ); } else {
           return <Redirect to='/' />
