@@ -23,16 +23,7 @@ class Header extends Component {
 
     return (
       <Menu className="App-header">
-        {/* <Menu.Menu position='left'>
-          <Link to="/">
-            <Menu.Item
-              className = "menuItem"
-              name='Home'
-              active={activeItem === 'Home'}
-              onClick={this.handleItemClick}
-            />
-          </Link>
-        </Menu.Menu> */}
+
         <Menu.Menu id='center-logo' position='left'>
           <Menu.Item>
             <Link to='/'>
@@ -48,17 +39,11 @@ class Header extends Component {
               <div id="request-button-header">
                 <Link to="/create"><Button size="medium" name='Request' active={activeItem === 'Request'} className="ui color1 button">SUBMIT A REQUEST</Button></Link>
               </div>
-              {/* <div id="request-button-header">
-                <Link to="/addtrip"><Button size="medium" name='Request' active={activeItem === 'Request'} className="ui color1 button">ADD TRIP</Button></Link>
-              </div> */}
             </div>}
           {
 
             (!this.props.currentUser.id || this.props.currentUser.type === 'Expat') ? null:
             <div>
-              {/* <div id="request-button-header">
-                <Link to="/create"><Button size="medium" name='Request' active={activeItem === 'Request'} className="ui color1 button">SUBMIT A REQUEST</Button></Link>
-              </div> */}
               <div id="request-button-header">
                 <Link to="/addtrip"><Button size="medium" name='Request' active={activeItem === 'Request'} className="ui color1 button">ADD TRIP</Button></Link>
               </div>

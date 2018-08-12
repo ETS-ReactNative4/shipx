@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 
 class RequestCard extends React.Component {
 
-      state = { open: false }
+    state = { open: false }
 
         show = dimmer => () => this.setState({ dimmer, open: true })
         close = () => this.setState({ open: false })

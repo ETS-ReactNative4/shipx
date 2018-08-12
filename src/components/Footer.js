@@ -7,7 +7,6 @@ class Footer extends React.Component {
   render(){
     return (
       <div className="App-footer" position="bottom">
-        <div id="traxpat-inc">© ShipX Inc.</div>
 
         <div>
           <div id="travelers">TRAVELERS</div>
@@ -32,6 +31,8 @@ class Footer extends React.Component {
           <div id="contact-text-3">Brooklyn, NY 11201</div>
           <Icon name="twitter"/> <Icon  name="facebook" /> <Icon  name="instagram" />
         </div>
+
+        <div id="traxpat-inc">© ShipX Inc.</div>
 
       </div>
       );
