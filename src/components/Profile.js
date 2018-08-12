@@ -69,7 +69,7 @@ componentWillUnmount() {
             <hr/>
           </div>
           :
-          <div className="expatRequestsList">
+          <div className="requestsList">
           <Card.Group centered itemsPerRow={4}>
             {this.props.requests.requestsList.map(request => {
               return <RequestCard key={request.id} request={request} requestNumber={this.props.requests.requestsList.indexOf(request)+1}/>

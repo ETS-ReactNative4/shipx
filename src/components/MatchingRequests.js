@@ -41,7 +41,7 @@ class MatchingRequests extends React.Component {
     
     return(
       <div>
-          <div className="matching-requests">
+          <div className="requestsList">
             <Card.Group centered itemsPerRow={4}>
               {filteredRequests.map(request => {
                 return <RequestCard key={request.id} request={request}/>

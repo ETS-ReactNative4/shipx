@@ -48,16 +48,6 @@ class RequestCard extends React.Component {
                             </Label><hr/></div> : null}
                         </div>
                     </Card.Content>
-                    {/* <Card.Content extra>
-                        <div className='ui two buttons'>
-                        <Button basic color='green' onClick={this.show(true)}>
-                            Details
-                        </Button>
-                        <Button basic color='red'>
-                            Decline
-                        </Button>
-                        </div>
-                    </Card.Content> */}
                 </Card>
             {/* </Card.Group> */}
 

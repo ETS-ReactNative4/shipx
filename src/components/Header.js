@@ -23,11 +23,10 @@ class Header extends Component {
 
     return (
       <Menu className="App-header">
-
         <Menu.Menu id='center-logo' position='left'>
           <Menu.Item>
             <Link to='/'>
-              <img src='shipX.png' />
+              <img src='shipX2.png' />
             </Link>
           </Menu.Item>
         </Menu.Menu>
@@ -37,7 +36,7 @@ class Header extends Component {
             (!this.props.currentUser.id || this.props.currentUser.type === 'Traveler') ? null:
             <div>
               <div id="request-button-header">
-                <Link to="/create"><Button size="medium" name='Request' active={activeItem === 'Request'} className="ui color1 button">SUBMIT A REQUEST</Button></Link>
+                <Link to="/create"><Button size="tiny" name='Request' active={activeItem === 'Request'} className="ui color1 button">SUBMIT A REQUEST</Button></Link>
               </div>
             </div>}
           {
@@ -45,14 +44,14 @@ class Header extends Component {
             (!this.props.currentUser.id || this.props.currentUser.type === 'Expat') ? null:
             <div>
               <div id="request-button-header">
-                <Link to="/addtrip"><Button size="medium" name='Request' active={activeItem === 'Request'} className="ui color1 button">ADD TRIP</Button></Link>
+                <Link to="/addtrip"><Button size="tiny" name='Request' active={activeItem === 'Request'} className="ui color1 button">ADD TRIP</Button></Link>
               </div>
             </div>}
           
           {
             (this.props.currentUser.type === 'Traveler' || this.props.currentUser.type === 'Expat') ? null:
           <div id="traveler-button-header">
-            <Link to="/traveler"><Button size="medium" name='Traveler' active={activeItem === 'Traveler'} className="ui color2 button">BECOME A TRAVELER</Button></Link>
+            <Link to="/traveler"><Button size="tiny" name='Traveler' active={activeItem === 'Traveler'} className="ui color2 button">BECOME A TRAVELER</Button></Link>
           </div>}
           
           <Link to="#">
@@ -85,15 +84,14 @@ class Header extends Component {
           { !this.props.currentUser.id ?
           <Link to="/signup">
             <Menu.Item
-              name='Sign Up'
-              active={activeItem === 'Sign Up'}
+              name='Signup'
+              active={activeItem === 'Signup'}
               onClick={this.handleItemClick}
             />
           </Link> :
           <Link to="/">
             <Menu.Item
               name='Logout'
-              // active={activeItem === ''}
               onClick={this.handleLogout}
             />
           </Link> }

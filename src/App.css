@@ -5,6 +5,97 @@
 .App-header {
   background-color: rgb(0, 0, 0);
   height: 75px;
-  padding: 20px;
+  padding: 15px 0px 5px 10px;
   color: rgb(255, 255, 255);
+}
+
+#center-logo {
+  margin-left: -30px;
+}
+
+.ui.color2.button {
+  color: azure;
+  background-color: #C84FE3;
+}
+
+.fasted-way-msg {
+  font-size: 1.2rem;
+}
+
+.how-it-works {
+  padding: 10px 0 20px 0;
+}
+
+.how-to {
+  margin: 0px;
+}
+
+.how-to-icon {
+  margin-top: 40px;
+  font-size: 4rem;
+}
+
+.button-above-footer {
+  padding-top: 20px;
+}
+
+.ui.color1.button {
+  color: azure;
+  background-color: #E87075;
+}
+
+.Above-footer {
+  color: azure;
+  height: 200px;
+  padding: 40px;
+  background-color: #49C9DA;
+}
+
+.App-footer {
+  padding: 20px;
+  background-color: rgba(29, 29, 29, 0.879);
+}
+
+#travelers {
+  padding: 10px;
+  font: bold;
+  color: azure;
+}
+
+#travelers-text {
+  padding: 0px 40px 10px 40px;
+}
+
+#company {
+  padding: 10px;
+  font: bold;
+  color: azure;
+}
+
+#contact {
+  padding: 20px 0 10px 0;
+  font: bold;
+  color: azure;
+}
+
+#social-icons {
+  padding: 20px;
+  color: #2BA3EF;
+  font-size: 1.7rem;
+}
+
+.signup-form {
+  padding: 30px;
+}
+
+.request-form {
+  padding: 30px;
+}
+
+.requestsList {
+  padding: 20px;
+}
+
+.request-cards {
+  margin: 0 10px 20px 0;
 }

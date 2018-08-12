@@ -98,12 +98,12 @@ render() {
                 <h3>MAKE A NEW REQUEST</h3>
                 <p id="receive-fast">Receive it fast for much less</p>
             </div>
-            <Form id="request-form" onSubmit={this.handleSubmit}>
+            <Form className="request-form" onSubmit={this.handleSubmit}>
                 <Form size="medium">
                     <Form.Field required control={Input} value={this.state.item_url} label='ITEM URL' placeholder='http://...'  onChange={this.handleChange} name="item_url"/>
                 <Form.Field required control={Input} value={this.state.item_cost} label='ITEM PRICE' placeholder='$100.00' type="number" min="0" onChange={this.handleChange} name="item_cost"/>
                 <Form.Field required control={Input} value={this.state.weight} label='ITEM WEIGHT' placeholder='1lb' type="number" min="0" onChange={this.handleChange} name="weight"/>
-                <Form.Group>
+                
                     <Form.Field required control={Input} value={this.state.item_name} label='ITEM NAME' placeholder='MacBook charger' id="item-name" onChange={this.handleChange} name="item_name"/>
                     < Form.Field required control = {
                         Input
@@ -116,12 +116,12 @@ render() {
                     id = "item-quantity" 
                     onChange={this.handleChange} 
                     name="quantity"/>
-                </Form.Group>
+                
 
-                <Form.Group>
+                
                     <Form.Field required control={Input} value={this.state.departing_city} label='FROM' placeholder='New York City' id="item-create-from" onChange={this.handleChange} name="departing_city"/>
                     < Form.Field required control = {Input} value={this.state.destination_city} label = 'TO' placeholder = 'London' id = "item-create-to" onChange={this.handleChange} name="destination_city"/>
-                </Form.Group>
+                
                 
                 
                 </Form>

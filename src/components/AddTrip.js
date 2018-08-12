@@ -92,40 +92,38 @@ render() {
             <div className="create-request request-trip-form">
                 <div id="create-form-header">
                     <h3>ADD A TRIP</h3>
-                    <p id="receive-fast">Earn extra money on every trip, upt to $500</p>
+                    <h5 id="receive-fast">Earn extra money on every trip, upt to $500</h5>
                 </div>
-                <Form id="request-form" onSubmit={this.handleSubmit}>
+                <Form className="request-form" onSubmit={this.handleSubmit}>
                     <Form size="medium">
-                    {/* <Form.Field control={Input} label='DEPARTURE CITY' placeholder='New York City' />
-                    <Form.Field control={Input} label='DESTINATION CITY' placeholder='Dubai' />
-                    */}
-                    <Form.Group>
-                        <Form.Field control={Input} value={this.state.departure_city} label='DEPARTURE CITY' name="departure_city" onChange={this.handleChange} placeholder='New York City' id="add-trip"/>
-                        < Form.Field control = {
-                            Input
-                        }
-                        value={this.state.depart_date}
-                        label = 'DEPART DATE'
-                        name="depart_date"
-                        onChange={this.handleChange}
-                        placeholder = '08/06/2018'
-                        type = "date"
-                        id = "date-filler" />
-                    </Form.Group>
 
-                    <Form.Group>
-                        <Form.Field control={Input} value={this.state.destination_city} label='DESTINATION CITY' name="destination_city" onChange={this.handleChange} placeholder='Dubai' id="add-trip2"/>
-                        < Form.Field control = {
-                            Input
-                        }
-                        value={this.state.arrival_date}
-                        label = 'ARRIVAL DATE'
-                        name="arrival_date"
-                        onChange={this.handleChange}
-                        placeholder = '08/07/2018'
-                        type = "date"
-                        id = "date-filler2" />
-                    </Form.Group>
+                    
+                    <Form.Field control={Input} value={this.state.departure_city} label='DEPARTURE CITY' name="departure_city" onChange={this.handleChange} placeholder='New York City' id="add-trip"/>
+                    < Form.Field control = {
+                        Input
+                    }
+                    value={this.state.depart_date}
+                    label = 'DEPART DATE'
+                    name="depart_date"
+                    onChange={this.handleChange}
+                    placeholder = '08/06/2018'
+                    type = "date"
+                    id = "date-filler" />
+                
+
+                    
+                    <Form.Field control={Input} value={this.state.destination_city} label='DESTINATION CITY' name="destination_city" onChange={this.handleChange} placeholder='Dubai' id="add-trip2"/>
+                    < Form.Field control = {
+                        Input
+                    }
+                    value={this.state.arrival_date}
+                    label = 'ARRIVAL DATE'
+                    name="arrival_date"
+                    onChange={this.handleChange}
+                    placeholder = '08/07/2018'
+                    type = "date"
+                    id = "date-filler2" />
+                    
 
                     <Form.Field control={Input} value={this.state.airline} label='AIRLINE' name="airline" onChange={this.handleChange} placeholder='British Airways' />
 

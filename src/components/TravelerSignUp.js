@@ -53,15 +53,29 @@ class TravelerSignUp extends React.Component {
         })
     }
 
-
+    canBeSubmitted() {
+        const { name, email, password, phone_number, street, city, zip_code, identification_num } = this.state;
+        return (
+            name.length > 0 &&
+            email.length > 0 &&
+            password.length > 0 &&
+            phone_number.length > 0 &&
+            street.length > 0 &&
+            city.length > 0 &&
+            zip_code.length > 0 &&
+            identification_num.length > 0);
+    }
 
 
 render(){
+
+    const isEnabled = this.canBeSubmitted();
+
 return(
     <div>
         <div>
             <h3>TRAVELER SIGN UP</h3>
-            <h3>Start earning extra money on every trip, up to $500</h3>
+            <h5>Start earning extra money on every trip, up to $500</h5>
         </div>
         <br/>
         <div id="signup-form">
@@ -110,7 +124,7 @@ return(
                 <Form.Field>
                     <Checkbox style={{color: "black"}} label='I agree to the Terms and Conditions' />
                 </Form.Field>
-                <Form.Field type="submit"><Button size="medium" className="ui color2 button" type="submit">Submit</Button></Form.Field>
+                <Form.Field type="submit"><Button disabled={!isEnabled} size="medium" className="ui color2 button" type="submit">Submit</Button></Form.Field>
             </Form>
             <hr/>
         </div>

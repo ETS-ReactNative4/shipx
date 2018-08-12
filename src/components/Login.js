@@ -87,7 +87,7 @@ class Login extends React.Component {
                   <Form.Select fluid label='Category' options={options} placeholder='please select one' onChange={this.handleChange} name="category"/>
               </Form.Field>
 
-              <Form.Field type="submit"><Button size="medium" className="ui color3 button" type="submit">Login</Button></Form.Field>
+              <Form.Field type="submit"><Button size="medium" className="ui color1 button" type="submit">Login</Button></Form.Field>
           </Form>
 
           <h3> Don't have an account yet?</h3>
