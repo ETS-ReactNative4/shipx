@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="17px" viewBox="0 0 40 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>shipX-web Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="shipX-web-Copy-2">
+            <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="40" height="16.7792208"></rect>
+            <g id="ShypX" transform="translate(3.895065, 1.454545)" font-family="Sansation-Bold, Sansation" font-weight="bold">
+                <text id="Ship" font-size="10.3896104" fill="#000000">
+                    <tspan x="1.0423336" y="9.31168831">Ship</tspan>
+                </text>
+                <text id="X" font-size="12.4675325" fill="#FD6B6D">
+                    <tspan x="21.6186418" y="11">X</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

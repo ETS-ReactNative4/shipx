@@ -26,7 +26,7 @@ class Header extends Component {
         <Menu.Menu id='center-logo' position='left'>
           <Menu.Item>
             <Link to='/'>
-              <img src='shipX2.png' />
+              <img src='shipX2.svg' />
             </Link>
           </Menu.Item>
         </Menu.Menu>
