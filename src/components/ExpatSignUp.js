@@ -15,7 +15,7 @@ class ExpatSignUp extends React.Component {
             street: '',
             city: '',
             zip_code: '',
-            identification_num: ''
+            // identification_num: ''
         }
     }
 
@@ -30,7 +30,7 @@ class ExpatSignUp extends React.Component {
             street: this.state.street,
             city: this.state.city,
             zip_code: this.state.zip_code,
-            identification_num: this.state.identification_num
+            // identification_num: this.state.identification_num
         }
 
         console.log(this.props)
@@ -56,7 +56,7 @@ class ExpatSignUp extends React.Component {
         return (
             name.length > 0 &&
             email.length > 0 &&
-            password.length > 0 &&
+            // password.length > 0 &&
             phone_number.length > 0 &&
             street.length > 0 &&
             city.length > 0 &&
@@ -73,7 +73,7 @@ return(
     <div>
         <div>
             <h1>SIGN UP TODAY</h1>
-            <h5>To start requesting all the things you love, from anywhere</h5>
+            <h5>To start ordering all the things you want from the U.S.</h5>
         </div>
         <br/>
         <div id="signup-form">
@@ -99,10 +99,10 @@ return(
                     <input type="tel" placeholder='+1 212-555-5555' onChange={this.handleChange} name="phone_number"/>
                 </Form.Field>
 
-                <Form.Field>
+                {/* <Form.Field>
                     <label style={{color: "black"}}>Passport #</label>
                     <input type="number" placeholder='31195855' onChange={this.handleChange} name="identification_num"/>
-                </Form.Field>
+                </Form.Field> */}
 
                 <Form.Field>
                     <label style={{color: "black"}}>Street Address</label>

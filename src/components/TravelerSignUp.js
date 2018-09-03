@@ -102,7 +102,7 @@ return(
                 </Form.Field>
 
                 <Form.Field>
-                    <label style={{color: "black"}}>Passport #</label>
+                    <label style={{color: "black"}}>SSN #</label>
                     <input type="number" placeholder='31195855' onChange={this.handleChange} name="identification_num"/>
                 </Form.Field>
 

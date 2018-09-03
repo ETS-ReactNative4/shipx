@@ -14,12 +14,12 @@ class HowItWorks extends React.Component {
 
         <div class="how-to-icon">
             <i style={{color: "teal"}} class="add sign box icon"></i>
-            <h3 className="how-to">Add a Request</h3>
+            <h3 className="how-to">Submit an Order or Request</h3>
         </div>
 
         < div className = "how-to-icon">
             <i style={{color: "teal"}} class="suitcase icon"></i>
-            <h3 className="how-to">Receive Your Request</h3>
+            <h3 className="how-to">Package Gets Delivered</h3>
         </div>
 
       </div>

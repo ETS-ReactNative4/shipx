@@ -12,13 +12,13 @@ class Homepage extends React.Component {
       <div className="home">
         <div id="body">
             <div>
-                <p className="fasted-way-msg">The fastest way to request anything (legal) from anywhere (on earth) and get it delivered</p>
+                <p className="fasted-way-msg">The fastest way to order or request anything from the U.S.A and get it delivered.</p>
             </div>
             <div><hr/></div>
             <div>
               <div>
                   <h1 className="how-it-works-text">HOW IT WORKS</h1>
-                  <p className='anything-wherever'>Anything. From Anywhere. To wherever.</p>
+                  <p className='anything-wherever'>Order or Request Anything From the U.S.</p>
               </div>
             </div>
 

@@ -5,7 +5,7 @@ import { getLogin } from '../actions/index';
 import { connect } from 'react-redux';
 
 const options = [
-  { key: 'e', text: 'Expat', value: 'expat' },
+  { key: 'e', text: 'Customer', value: 'customer' },
   { key: 't', text: 'Traveler', value: 'traveler' },
 ]
 
@@ -83,15 +83,15 @@ class Login extends React.Component {
               </Form.Field>
 
               <Form.Field required>
-                  <label style={{color: "black"}}>Logging in as:</label>
-                  <Form.Select fluid label='Category' options={options} placeholder='please select one' onChange={this.handleChange} name="category"/>
+                  <label style={{color: "black"}}>Log in as:</label>
+                  <Form.Select fluid label='' options={options} placeholder='please select one' onChange={this.handleChange} name="category"/>
               </Form.Field>
 
               <Form.Field type="submit"><Button size="medium" className="ui color1 button" type="submit">Login</Button></Form.Field>
           </Form>
 
           <h3> Don't have an account yet?</h3>
-          <h4>Sign up as an <Link to="/signup">Expat</Link> or <Link to="/traveler">Travelers</Link></h4>
+          <h4>Sign up as a <Link to="/signup">Customer</Link> or <Link to="/traveler">Traveler</Link></h4>
           <div><hr/></div>
       </div>
     ); } else {

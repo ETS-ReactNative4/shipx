@@ -15,7 +15,7 @@ class AboveFooter extends React.Component {
                         <div>
                             <div id="anything-div">
                                 <h3 id="anything">
-                                    Anything you want, from anywhere. One stop to have it all. Zero reasons to wait.
+                                    Anything you want to ship or order from the U.S. One stop to have it all. Zero reasons to wait.
                         </h3>
                             </div>
                             <div className="button-above-footer">
@@ -27,11 +27,11 @@ class AboveFooter extends React.Component {
                         <div>
                             <div id="anything-div">
                                 <h3 id="anything">
-                                    Anything you want, from anywhere. One stop to have it all. Zero reasons to wait.
+                                    Anything you want to ship or order from the U.S. One stop to have it all. Zero reasons to wait.
                         </h3>
                             </div>
                             <div className="button-above-footer">
-                                <Link to="/create"><Button size="massive" className="ui color1 button">SUBMIT REQUEST</Button></Link>
+                                <Link to="/create"><Button size="massive" className="ui color1 button">SUBMIT ORDER</Button></Link>
                             </div>
                         </div> : null}
 
