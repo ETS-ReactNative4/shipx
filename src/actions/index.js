@@ -24,7 +24,6 @@ export function fetchAllExpatsRequests() {
         fetch(`https://shipxapi.herokuapp.com/api/v1/requests`)
         .then(resp => resp.json())
         .then(data => {
-            // console.log('data', data)
             dispatch({ type: GET_ALL_REQUESTS, payload: data})
         });
     }
@@ -57,7 +56,6 @@ export function fetchAllRequests(id) {
         fetch(`https://shipxapi.herokuapp.com/api/v1/expats/${id}/requests`)
         .then(resp => resp.json())
         .then(data => {
-            console.log('data', data)
             dispatch({ type: GET_REQUESTS, payload: data})
         });
     }
@@ -87,13 +85,11 @@ export function createRequest(newRequest, id) {
 // FETCH TRAVELER TRIPS
 
 export function fetchAllTrips(id) {
-    console.log('get id', id)
     return (dispatch) => {
         // dispatch({ type: GET_TRIPS });
         fetch(`https://shipxapi.herokuapp.com/api/v1/travelers/${id}/trips`)
         .then(resp => resp.json())
         .then(data => {
-            // console.log('data',data)
             dispatch({ type: GET_TRIPS, payload: data})
         });
     }
@@ -211,7 +207,6 @@ export function getReauth() {
             fetch('https://shipxapi.herokuapp.com/api/v1/reauth', options)
                 .then(resp => resp.json())
                 .then(user => {
-                    console.log(user)
                     dispatch(getLogin(user))
                 })
         }

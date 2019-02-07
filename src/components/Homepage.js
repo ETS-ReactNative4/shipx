@@ -12,7 +12,7 @@ class Homepage extends React.Component {
       <div className="home">
         <div id="body">
             <div>
-                <p className="fasted-way-msg">The fastest way to order or request anything from the U.S.A and get it delivered.</p>
+                <p className="fasted-way-msg">The best way to order or request anything from the U.S.A and get it delivered.</p>
             </div>
             <div><hr/></div>
             <div>

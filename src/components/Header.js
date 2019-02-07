@@ -67,19 +67,29 @@ class Header extends Component {
           <Link to="#">
             <Menu.Item
               className = "menuItem"
-              name='Help'
+              name='FAQ'
               active={activeItem === 'Help'}
               onClick={this.handleItemClick}
             />
-          </Link> : 
-
+          </Link> : null }
+          
+          { this.props.currentUser.type === 'Expat' ?
           <Link to="/profile">
             <Menu.Item
-              name='Profile'
+              name='My Orders'
               active={activeItem === 'Profile'}
               onClick={this.handleItemClick}
             />
-          </Link> }
+          </Link> : null }
+
+          { this.props.currentUser.type === 'Traveler' ?
+          <Link to="/profile">
+          <Menu.Item
+            name='My Trips'
+            active={activeItem === 'Profile'}
+            onClick={this.handleItemClick}
+          />
+        </Link> : null}
 
 
           { !this.props.currentUser.id ?

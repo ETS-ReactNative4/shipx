@@ -37,8 +37,6 @@ componentWillUnmount() {
   
 
   render(){
-    console.log('props', this.props.trips)
-    // console.log(this.props.fetchAllRequests)
 
     // const requests = this.props.fetchAllTrips()
     
@@ -71,8 +69,8 @@ componentWillUnmount() {
           :
           <div className="requestsList">
           <Card.Group centered itemsPerRow={4}>
-            {this.props.requests.requestsList.map(request => {
-              return <RequestCard key={request.id} request={request} requestNumber={this.props.requests.requestsList.indexOf(request)+1}/>
+            {this.props.requests.requestsList.reverse().map(request => {
+              return <RequestCard key={request.id} request={request} requestNumber={this.props.requests.requestsList.reverse().indexOf(request)+1}/>
             })}
           </Card.Group>
           <hr/>

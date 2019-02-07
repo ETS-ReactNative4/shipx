@@ -31,8 +31,6 @@ class Login extends React.Component {
     };
 
     handleSubmit = (e) => {
-      // debugger
-      // console.log(this.state.fields)
       e.preventDefault();
       const options = {
         method: 'POST',
@@ -42,7 +40,6 @@ class Login extends React.Component {
         },
         body: JSON.stringify(this.state.fields)
       }
-      // console.log(options)
       fetch('https://shipxapi.herokuapp.com/api/v1/login', options)
       .then(resp => resp.json())
       .then(user => {
@@ -54,7 +51,6 @@ class Login extends React.Component {
 
 
   render(){
-    // console.log(this.props)
     const { fields } = this.state;
     if (!this.props.currentUser.id) {
     return(

@@ -11,7 +11,7 @@ class Footer extends React.Component {
         <div>
           <div id="travelers">TRAVELERS</div>
           <div style={{color: "#a0a0a0"}} id='travelers-text'>Become a ShipX traveler and 
-            earn extra money everytime you travel. Earn up to $500 to help cover your travel cost.
+            earn extra money everytime you travel. Earn up to $500 to help cover your travel costs.
             We give you reasons to travel more.
           </div>
         </div>
@@ -20,6 +20,7 @@ class Footer extends React.Component {
           <div id="company">COMPANY</div>
           <div id="terms-policy"><Link to="#" style={{color: "#a0a0a0"}}>Terms</Link></div>
           <div id="terms-policy-2"><Link to="#" style={{color: "#a0a0a0"}}>Privacy Policy</Link></div>
+          <div id="terms-policy-2"><Link to="#" style={{color: "#a0a0a0"}}>FAQ</Link></div>
         </div>
 
         <div>

@@ -13,7 +13,6 @@ class RequestCard extends React.Component {
         close = () => this.setState({ open: false })
         
     render(){
-        console.log('requests',this.props)
         const { open, dimmer } = this.state
         const { id, item_name, item_url, description, weight, departing_city, destination_city, item_cost, status } = this.props.request
         return(
@@ -23,7 +22,7 @@ class RequestCard extends React.Component {
                     <Card.Content>
                         {/* <Image floated='right' size='mini' src='/images/avatar/large/steve.jpg' /> */}
                         <div>
-                            <h3 style={{color: "red"}}><strong>Request #{this.props.requestNumber}</strong></h3><hr/>
+                            <h3 style={{color: "red"}}><strong>Order #{this.props.requestNumber}</strong></h3><hr/>
                             <Card.Header style={{color: "red"}}><strong><a href={item_url} target="_blank">{item_name}</a></strong></Card.Header>
                             <br/>
                             <Card.Meta><strong>Value: ${item_cost}</strong></Card.Meta>
@@ -41,9 +40,10 @@ class RequestCard extends React.Component {
 
                             {(this.props.currentUser.type === 'Expat') ?
                             <div>
-                                <hr/>Estimated cost |  
+                                <hr/>Order |  
                             <Label id="price-tag" color='green'>
-                                ${(weight * 10)}
+                                Received
+                                {/* ${(weight * 10)} */}
                                 {/* ${((weight * 10) + (item_cost * 0.05)).toFixed(2)} */}
                             </Label><hr/></div> : null}
                         </div>

@@ -32,16 +32,11 @@ class TripCard extends React.Component {
     }
 
     handleClick = () => {
-        // console.log(this.props.trip);
         this.props.getSelectedTrip(this.props.trip)
     }
 
         
     render(){
-        console.log('PROPS',this.props)
-        console.log('DATA-ID',this.props.tripNumber)
-
-
         const { open, dimmer } = this.state
         const { id, depart_date, arrival_date, airline, departure_city, destination_city, flight_num } = this.props.trip
         return(

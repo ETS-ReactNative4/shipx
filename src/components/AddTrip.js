@@ -49,9 +49,6 @@ class AddTrip extends Component {
                 traveler_id: this.state.traveler_id
             }
 
-            // console.log(this.props)
-            // console.log(newTrip)
-
             this.props.createTrip(newTrip, this.props.currentUser.id)
 
             e.target.reset()
@@ -64,7 +61,6 @@ class AddTrip extends Component {
 
 
     handleChange = (e) => {
-        console.log(e.target.value);
         this.setState({
             [e.target.name]: e.target.value
         })
@@ -82,9 +78,6 @@ class AddTrip extends Component {
     }
 
 render() {
-    // const { value } = this.state
-    console.log(this.state.traveler_id);
-
     const isEnabled = this.canBeSubmitted();
     
     return (

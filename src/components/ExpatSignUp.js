@@ -15,7 +15,7 @@ class ExpatSignUp extends React.Component {
             street: '',
             city: '',
             zip_code: '',
-            // identification_num: ''
+            identification_num: ''
         }
     }
 
@@ -30,11 +30,8 @@ class ExpatSignUp extends React.Component {
             street: this.state.street,
             city: this.state.city,
             zip_code: this.state.zip_code,
-            // identification_num: this.state.identification_num
+            identification_num: this.state.identification_num
         }
-
-        console.log(this.props)
-        console.log(newExpat)
 
     this.props.createExpat(newExpat)
 
@@ -45,7 +42,6 @@ class ExpatSignUp extends React.Component {
 
 
     handleChange = (e) => {
-        console.log(e.target.value);
         this.setState({
             [e.target.name]: e.target.value
         })
@@ -56,12 +52,12 @@ class ExpatSignUp extends React.Component {
         return (
             name.length > 0 &&
             email.length > 0 &&
-            // password.length > 0 &&
+            password.length > 0 &&
             phone_number.length > 0 &&
             street.length > 0 &&
             city.length > 0 &&
-            zip_code.length > 0 &&
-            identification_num.length > 0);
+            zip_code.length > 0)
+            // identification_num.length > 0);
     }
 
 

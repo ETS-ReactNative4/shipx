@@ -35,8 +35,6 @@ class TravelerSignUp extends React.Component {
             status: this.state.status
         }
 
-        console.log(this.props)
-        console.log(newTraveler)
 
     this.props.createTraveler(newTraveler)
 
@@ -47,7 +45,6 @@ class TravelerSignUp extends React.Component {
 
 
     handleChange = (e) => {
-        console.log(e.target.value);
         this.setState({
             [e.target.name]: e.target.value
         })

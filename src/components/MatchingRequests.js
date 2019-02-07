@@ -11,7 +11,6 @@ import { Card } from 'semantic-ui-react';
 class MatchingRequests extends React.Component {
 
   // handleClick(e) {
-  //     console.log(e.target)
   //     let departure_city = e.target.departure_city
   //     let destination_city = e.target.destination_city
   //       this.props.fetchAllRequests().filter(request => {
@@ -28,8 +27,6 @@ class MatchingRequests extends React.Component {
   
   
   render(){
-    // console.log('props', this.props.requests)
-    // console.log(this.props.fetchAllRequests)
     // const requests = this.props.fetchAllTrips()
 
     const filteredRequests = this.props.requests.allRequestsList.filter(request => {
@@ -37,14 +34,12 @@ class MatchingRequests extends React.Component {
       ((this.props.selectedTrip.destination_city).toLowerCase().trim()).includes((request.destination_city).toLowerCase().trim())
     })
 
-    console.log(filteredRequests);
-    
     return(
       <div>
           <div className="requestsList">
             <Card.Group centered itemsPerRow={4}>
-              {filteredRequests.map(request => {
-                return <RequestCard key={request.id} request={request}/>
+              {filteredRequests.reverse().map(request => {
+                return <RequestCard key={request.id} request={request} requestNumber={filteredRequests.reverse().indexOf(request)+1}/>
               })}
             </Card.Group>
           </div>

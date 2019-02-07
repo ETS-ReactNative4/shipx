@@ -52,9 +52,6 @@ class CreateRequest extends Component {
                     trip_id: this.state.trip_id
                 }
 
-                // console.log(this.props)
-                // console.log(newRequest)
-
             this.props.createRequest(newRequest, this.props.currentUser.id)
 
             e.target.reset()
@@ -67,7 +64,6 @@ class CreateRequest extends Component {
 
 
     handleChange = (e) => {
-        console.log(e.target.value);
         this.setState({
             [e.target.name]: e.target.value
         })
@@ -87,8 +83,6 @@ class CreateRequest extends Component {
     }
 
     render() {
-        console.log('STATE',this.state.expat_id)
-
         // const { item_name, description, item_url, item_cost, departing_city, destination_city, weight, quantity } = this.state;
         const isEnabled = this.canBeSubmitted();
 
